@@ -11,7 +11,7 @@ body {
   color: #777777;
 }
 .text-primary {
-  color: #fed136;
+  color: #5DA7E5;
 }
 p {
   font-size: 14px;
@@ -28,13 +28,13 @@ a.active {
   outline: none;
 }
 a {
-  color: #fed136;
+  color: #5DA7E5;
 }
 a:hover,
 a:focus,
 a:active,
 a.active {
-  color: #fec503;
+  color: #5DA7E5;
 }
 h1,
 h2,
@@ -57,11 +57,12 @@ h6 {
 }
 .btn-primary {
   color: white;
-  background-color: #fed136;
+  background-color: #5DA7E5;
   border-color: #fed136;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
+  
 }
 .btn-primary:hover,
 .btn-primary:focus,
@@ -69,7 +70,7 @@ h6 {
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
   color: white;
-  background-color: #fec503;
+  background-color: #5DA7E5;
   border-color: #f6bf01;
 }
 .btn-primary:active,
@@ -92,23 +93,26 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary.disabled.active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
-  background-color: #fed136;
+  background-color: #5DA7E5;
   border-color: #fed136;
 }
 .btn-primary .badge {
-  color: #fed136;
+  color: #5DA7E5;
   background-color: white;
 }
 .btn-xl {
-  color: white;
-  background-color: #fed136;
-  border-color: #fed136;
+  color:  #E6F0FC;
+  /* background-color: #fed136; */
+ 
+  border-color: #E6F0FC;
+  border-width:5px;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   border-radius: 3px;
   font-size: 18px;
   padding: 20px 40px;
+  
 }
 .btn-xl:hover,
 .btn-xl:focus,
@@ -116,8 +120,8 @@ fieldset[disabled] .btn-primary.active {
 .btn-xl.active,
 .open .dropdown-toggle.btn-xl {
   color: white;
-  background-color: #fec503;
-  border-color: #f6bf01;
+  background-color: #5DA7E5;
+  border-color: #5DA7E5;
 }
 .btn-xl:active,
 .btn-xl.active,
@@ -139,11 +143,11 @@ fieldset[disabled] .btn-xl:active,
 .btn-xl.disabled.active,
 .btn-xl[disabled].active,
 fieldset[disabled] .btn-xl.active {
-  background-color: #fed136;
-  border-color: #fed136;
+  background-color: #5DA7E5;
+  border-color: #5DA7E5;
 }
 .btn-xl .badge {
-  color: #fed136;
+  color: #5DA7E5;
   background-color: white;
 }
 .navbar-custom {
@@ -151,21 +155,21 @@ fieldset[disabled] .btn-xl.active {
   border-color: transparent;
 }
 .navbar-custom .navbar-brand {
-  color: #fed136;
-  font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
+  color: #5DA7E5;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, cursive;
 }
 .navbar-custom .navbar-brand:hover,
 .navbar-custom .navbar-brand:focus,
 .navbar-custom .navbar-brand:active,
 .navbar-custom .navbar-brand.active {
-  color: #fec503;
+  color: #5DA7E5;
 }
 .navbar-custom .navbar-collapse {
   border-color: rgba(255, 255, 255, 0.02);
 }
 .navbar-custom .navbar-toggle {
-  background-color: #fed136;
-  border-color: #fed136;
+  background-color: #5DA7E5;
+  border-color: #5DA7E5;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   color: white;
@@ -173,7 +177,7 @@ fieldset[disabled] .btn-xl.active {
 }
 .navbar-custom .navbar-toggle:hover,
 .navbar-custom .navbar-toggle:focus {
-  background-color: #fed136;
+  background-color: #5DA7E5;
 }
 .navbar-custom .nav li a {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -184,19 +188,21 @@ fieldset[disabled] .btn-xl.active {
 }
 .navbar-custom .nav li a:hover,
 .navbar-custom .nav li a:focus {
-  color: #fed136;
+  color: #5DA7E5;
   outline: none;
 }
 .navbar-custom .navbar-nav > .active > a {
   border-radius: 0;
   color: white;
-  background-color: #fed136;
+  background-color: #5DA7E5;
 }
 .navbar-custom .navbar-nav > .active > a:hover,
 .navbar-custom .navbar-nav > .active > a:focus {
   color: white;
-  background-color: #fec503;
+  background-color: #5DA7E5;
 }
+
+
 @media (min-width: 768px) {
   .navbar-custom {
     background-color: transparent;
@@ -212,21 +218,36 @@ fieldset[disabled] .btn-xl.active {
     -moz-transition: all 0.3s;
     transition: all 0.3s;
   }
+  
+  .logo-ORI{
+	position: relative;
+	width: 90px;
+	height: 44px;
+	padding-bottom: 25px;
+  
+  }
+  
+  
   .navbar-custom .navbar-nav > .active > a {
     border-radius: 3px;
   }
 }
+@font-face {
+    font-family: 'YourFontName'; /*a name to be used later*/
+    src: url('http://domain.com/fonts/font.ttf'); /*URL to font*/
+}
+
 @media (min-width: 768px) {
   .navbar-custom.affix {
     background-color: #222222;
-    padding: 10px 0;
+    /* padding: 10px 0; */
   }
   .navbar-custom.affix .navbar-brand {
     font-size: 1.5em;
   }
 }
 header {
-  background-image: url('../img/header-bg.jpg');
+  background-image: url('../img/Cerro7Colores.jpg');
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -238,8 +259,8 @@ header {
   color: white;
 }
 header .intro-text {
-  padding-top: 100px;
-  padding-bottom: 50px;
+   padding-top: 140px;
+   padding-bottom: 200px;
 }
 header .intro-text .intro-lead-in {
   font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -249,16 +270,24 @@ header .intro-text .intro-lead-in {
   margin-bottom: 25px;
 }
 header .intro-text .intro-heading {
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 50px;
-  line-height: 50px;
-  margin-bottom: 25px;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /* font-style: italic; */
+	/* font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif; */
+     background: -webkit-linear-gradient(90deg , #5DA7E5, #FFFFFF);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-transform: lowercase;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 50px;
+    margin-bottom: 50px;
+	
 }
+ 
+
 @media (min-width: 768px) {
   header .intro-text {
-    padding-top: 300px;
+    padding-top: 140px;
     padding-bottom: 200px;
   }
   header .intro-text .intro-lead-in {
@@ -269,13 +298,24 @@ header .intro-text .intro-heading {
     margin-bottom: 25px;
   }
   header .intro-text .intro-heading {
-    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 75px;
-    line-height: 75px;
+	font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /* font-style: italic; */
+	/* font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif; */
+     background: -webkit-linear-gradient(90deg , #5DA7E5, #FFFFFF);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-transform: lowercase;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 50px;
     margin-bottom: 50px;
+	
   }
+  
+ 
+  
+  /* SECTION */
+  
 }
 section {
   padding: 100px 0;

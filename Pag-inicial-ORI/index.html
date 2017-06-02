@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+	
+	
+	
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,6 +26,8 @@
     <!-- Theme CSS -->
     <link href="css/agency.css" rel="stylesheet">
 
+	<!-- <link href="css/style.css" rel="stylesheet"> -->
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -31,6 +35,64 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js" integrity="sha384-ZoaMbDF+4LeFxg6WdScQ9nnR1QC2MIRxA1O9KWEXQwns1G8UNyIEZIQidzb0T1fo" crossorigin="anonymous"></script>
     <![endif]-->
 
+	
+	<!-- Codigo para search-bar -->
+	
+	
+    <style>
+        input[type=search] {
+            background: none;
+            font-weight: bold;
+            border-color: #2e2e2e;
+            border-style: solid;
+            border-width: 2px 2px 2px 2px;
+            outline: none;
+            padding: 10px 20px 10px 20px;
+            width: 250px;
+        }
+      /*Css to target the dropdownbox*/
+        ul.ui-autocomplete {
+            color: red !important;
+            -moz-border-radius: 15px;
+            border-radius: 15px;
+        }
+    </style>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script>
+        $(function () {
+            var availableTags = [
+              "ActionScript",
+              "AppleScript",
+              "Asp",
+              "BASIC",
+              "C",
+              "C++",
+              "Clojure",
+              "COBOL",
+              "ColdFusion",
+              "Erlang",
+              "Fortran",
+              "Groovy",
+              "Haskell",
+              "Java",
+              "JavaScript",
+              "Lisp",
+              "Perl",
+              "PHP",
+              "Python",
+              "Ruby",
+              "Scala",
+              "Scheme"
+            ];
+            $("#search_input").autocomplete({
+                source: availableTags
+            });
+        });
+    </script>
+	
 </head>
 
 <body id="page-top" class="index">
@@ -43,7 +105,9 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">ORI</a>
+                <a class="navbar-brand page-scroll" href="#page-top">
+					<img class ="logo-ORI" src="img/logos/ORI logo 2.png" alt="logo-ORI" >
+				</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -62,10 +126,10 @@
                         <a class="page-scroll" href="#about">Ventajas</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#team">Equipo</a>
+                        <a class="page-scroll" href="#team">Iniciar sesión</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Contacto</a>
+                        <a class="page-scroll" href="#contact">Registrarse</a>
                     </li>
                 </ul>
             </div>
@@ -81,31 +145,53 @@
         <div class="container">
 			
             <div class="intro-text">
-                <div class="intro-lead-in">ORI</div>
+                <!-- <div class="intro-lead-in"> -->
+					<!-- <img class ="logo-ORI" src="img/logos/ORI logo 2.png" alt="logo-ORI" > -->
+				<!-- </div> -->
+				<div class="container"> 
+					<div class="intro-heading"> Planificar tu viaje nunca fue tan facil
+					</div>
+				</div>
 				
-                <div class="intro-heading">La forma inteligente de viajar fácil</div>
-                <a href="#services" class="page-scroll btn btn-xl">¿Qué es ORI?</a>
-            </div>
+			</div>
+			<form id="form1">
+				<div class="ui-widget">
+					<input name="city" id="search_input" type="search" placeholder="City, ST">
+				</div>
+			</form>
             <div class="container">
-              <div class="search-bar">
-              <input type="text" list="destinos">
-                <datalist id="destinos">
-                  <option value="Bariloche">
-                  <option value="Buenos Aires">
-                  <option value="Calafate">
-                  <option value="Córdoba">
-                  <option value="Iguazú">
-                  <option value="Mar del Plata">
-                  <option value="Puerto Madryn">
-                  <option value="Rosario">
-                  <option value="Salta">
-                  <option value="San Rafael">
-                  <option value="Ushuaia">
-                </datalist>
-              </input>
-            </div>
+				<div class ="search-box">
+				  <div class="search-bar">
+					<input type="text" list="destinos">
+						<datalist id="destinos">
+							<option value="Bariloche">
+							<option value="Buenos Aires">
+							<option value="Calafate">
+							<option value="Córdoba">
+							<option value="Iguazú">
+							<option value="Mar del Plata">
+							<option value="Puerto Madryn">
+							<option value="Rosario">
+							<option value="Salta">
+							<option value="San Rafael">
+							<option value="Ushuaia">
+						</datalist>
+					</input>
+				  </div>
+				</div>
             </div>
           </div>
+		  
+		 
+			
+			<div class="intro-text">
+				<a href="#services" class="page-scroll btn btn-xl">¿Qué es ORI?</a>
+			</div>
+			
+		</div>		  
+		  
+		  
+		  
     </header>
 
     <!-- Services Section -->
