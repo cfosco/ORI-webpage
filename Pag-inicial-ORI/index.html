@@ -37,61 +37,12 @@
 
 	
 	<!-- Codigo para search-bar -->
+	<link rel="stylesheet" type="text/css" media="all" href="css/style.css">
 	
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.autocomplete.min.js"></script>
+	<script type="text/javascript" src="js/currency-autocomplete.js"></script>
 	
-    <style>
-        input[type=search] {
-            background: none;
-            font-weight: bold;
-            border-color: #2e2e2e;
-            border-style: solid;
-            border-width: 2px 2px 2px 2px;
-            outline: none;
-            padding: 10px 20px 10px 20px;
-            width: 250px;
-        }
-      /*Css to target the dropdownbox*/
-        ul.ui-autocomplete {
-            color: red !important;
-            -moz-border-radius: 15px;
-            border-radius: 15px;
-        }
-    </style>
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
-    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
-    <link rel="stylesheet" href="/resources/demos/style.css">
-    <script>
-        $(function () {
-            var availableTags = [
-              "ActionScript",
-              "AppleScript",
-              "Asp",
-              "BASIC",
-              "C",
-              "C++",
-              "Clojure",
-              "COBOL",
-              "ColdFusion",
-              "Erlang",
-              "Fortran",
-              "Groovy",
-              "Haskell",
-              "Java",
-              "JavaScript",
-              "Lisp",
-              "Perl",
-              "PHP",
-              "Python",
-              "Ruby",
-              "Scala",
-              "Scheme"
-            ];
-            $("#search_input").autocomplete({
-                source: availableTags
-            });
-        });
-    </script>
 	
 </head>
 
@@ -154,15 +105,14 @@
 				</div>
 				
 			</div>
-			<form id="form1">
-				<div class="ui-widget">
-					<input name="city" id="search_input" type="search" placeholder="City, ST">
-				</div>
-			</form>
-            <div class="container">
-				<div class ="search-box">
-				  <div class="search-bar">
-					<input type="text" list="destinos">
+			 <div id="w">
+				<div id="content">
+					
+					<h2>Elije tu destino</h2>
+		  
+					<div id="searchfield">
+						<form><input type="text" name="currency" class="biginput" list="destinos"></form>
+						
 						<datalist id="destinos">
 							<option value="Bariloche">
 							<option value="Buenos Aires">
@@ -176,10 +126,12 @@
 							<option value="San Rafael">
 							<option value="Ushuaia">
 						</datalist>
-					</input>
-				  </div>
-				</div>
-            </div>
+					
+					</div><!-- @end #searchfield -->
+		  
+				</div><!-- @end #content -->
+			</div><!-- @end #w -->
+	          
           </div>
 		  
 		 
@@ -230,6 +182,11 @@
                 </div>
             </div>
         </div>
+		
+		<div id="searchfield">
+				<form><input type="text" name="currency" class="biginput" id="autocomplete"></form>
+			</div><!-- @end #searchfield -->
+		
     </section>
 
     <!-- Portfolio Grid Section -->
