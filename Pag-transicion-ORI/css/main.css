@@ -139,8 +139,13 @@ h1 {
 
 	
 	#image1{
+		/* position: fixed; */
+		
+		
 		display:block;
 		position: relative;
+		top: 0;
+		
 		margin: auto;
 		width: 250px;
 		height: 250px;
@@ -148,16 +153,25 @@ h1 {
 		
 		padding-top: 35px;
 		padding-bottom: 20px;
-		-webkit-transform: opacity(0);  /* Chrome, Opera 15+, Safari 3.1+ */
-        -ms-transform: opacity(0);  /* IE 9 */
-        transform: opacity(0);  /* Firefox 16+, IE 10+, Opera */
+		
+		visibility:visible;
+		-webkit-transform: translateX(0);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: translateX(0);  /* IE 9 */
+        transform: translateX(0);  /* Firefox 16+, IE 10+, Opera */
+		left: 0;
 	}
 	#center {
 		text-align: center;
-		
+		top: 0;
 		font-size: 40px;
 		font-weight: bold;
 		color: white;
+		
+		visibility:visible;
+		-webkit-transform: translateX(0);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: translateX(0);  /* IE 9 */
+        transform: translateX(0);  /* Firefox 16+, IE 10+, Opera */
+		left: 0;
 	}
 
 	
@@ -198,6 +212,29 @@ h1 {
                 transition: all 0.3s 1s ease-out;
     }
     
+	.loaded #image1 {
+		visibility: hidden;
+
+       opacity: 0;
+        -webkit-transition: all 0.3s ease-out;  
+                transition: all 0.3s ease-out;
+		
+	}
+	.loaded #center {
+		text-align: center;
+		
+		font-size: 40px;
+		font-weight: bold;
+		color: white;
+		
+		visibility: hidden;
+
+       opacity: 0;
+       -webkit-transition: all 0.3s ease-out;  
+       transition: all 0.3s ease-out;
+	}
+	
+	
     /* JavaScript Turned Off */
     .no-js #loader-wrapper {
         display: none;
